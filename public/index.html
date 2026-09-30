@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agricultural Monitoring System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Agricultural Monitoring System</h1>
+
+        <p class="subtitle">
+            Greenhouse Sensor Monitoring
+        </p>
+
+        <div class="form-box">
+
+            <input type="hidden" id="readingId">
+
+            <label>Greenhouse</label>
+            <input
+                type="text"
+                id="greenhouse"
+                placeholder="Example: GH-01"
+            >
+
+            <label>Soil Moisture (%)</label>
+            <input
+                type="number"
+                id="soilMoisture"
+                placeholder="Example: 65"
+            >
+
+            <label>Temperature (°C)</label>
+            <input
+                type="number"
+                id="temperature"
+                placeholder="Example: 28"
+            >
+
+            <label>Humidity (%)</label>
+            <input
+                type="number"
+                id="humidity"
+                placeholder="Example: 72"
+            >
+
+            <button onclick="saveReading()">
+                Save Reading
+            </button>
+
+        </div>
+
+        <h2>Sensor Readings</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Greenhouse</th>
+                    <th>Soil Moisture</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="readingsTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
